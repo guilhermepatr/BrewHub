@@ -1,0 +1,86 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+} /* Cores do sistema */
+:root {
+  --beer-yellow: #f9d342; /* amarelo pilsen */
+  --beer-brown: #3e2719; /* marrom escuro */
+  --foam-white: #f5f5f5; /* espuma */
+  --foam-gray: #e0e0e0; /* cinza da espuma */
+  --background: #fff2d2; /* tom bege de fundo */
+} /* Container geral dividido */
+.container {
+  display: flex;
+  height: 100vh;
+} /* Lado esquerdo com o logo */
+.left-side {
+  flex: 1;
+  background-color: var(--background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.left-side img {
+  max-width: 70%;
+  height: auto;
+} /* Lado direito com o formulário */
+.right-side {
+  flex: 1;
+  background-color: var(--beer-yellow);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+.right-side h2 {
+  color: var(--beer-brown);
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+.right-side form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  max-width: 350px;
+}
+.right-side input {
+  padding: 0.9rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--foam-gray);
+  border-radius: 8px;
+  font-size: 1rem;
+}
+.right-side input:focus {
+  border-color: var(--beer-brown);
+  outline: none;
+}
+.right-side button {
+  background-color: var(--beer-brown);
+  color: var(--foam-white);
+  border: none;
+  padding: 0.9rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.right-side button:hover {
+  background-color: #5d4037;
+} /* Responsividade */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .left-side {
+    flex: none;
+    height: 40vh;
+  }
+  .right-side {
+    flex: none;
+    height: 60vh;
+  }
+}

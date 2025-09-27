@@ -1,0 +1,45 @@
+:root {
+  --beer-yellow: #f9d342; /* amarelo pilsen */
+  --beer-brown: #3e2719; /* marrom escuro */
+  --foam-white: #f5f5f5; /* espuma */
+  --foam-gray: #e0e0e0; /* cinza da espuma */
+  --background: #fff2d2; /* bege */
+}
+
+/* Fundo */
+.bg-custom {
+  background-color: var(--background);
+}
+
+.bg-yellow {
+  background-color: var(--beer-yellow);
+}
+
+/* Texto */
+.text-brown {
+  color: var(--beer-brown) !important;
+}
+
+/* Botão */
+.btn-brown {
+  background-color: var(--beer-brown);
+  color: var(--foam-white);
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.btn-brown:hover {
+  background-color: #5d4037;
+  color: var(--foam-white);
+}
+
+/* Logo */
+.logo-img {
+  max-width: 70%;
+  height: auto;
+}
+
+/* Efeito modal */
+.shadow-lg {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3) !important;
+}
