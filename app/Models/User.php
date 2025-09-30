@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Lib\Validations;
 use Core\Database\ActiveRecord\Model;
+use Core\Database\ActiveRecord\BelongsTo;
 
 /**
  * @property int $id
@@ -58,4 +59,6 @@ class User extends Model
             $this->encrypted_password = password_hash($value, PASSWORD_DEFAULT);
         }
     }
+
+    //public function role(): BelongsTo
 }
