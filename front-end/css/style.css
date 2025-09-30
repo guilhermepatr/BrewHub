@@ -43,3 +43,28 @@
 .shadow-lg {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3) !important;
 }
+
+.container2 {
+  display: flex;
+  height: 100vh;
+} /* Lado esquerdo com o logo */
+.left-side {
+  flex: 1;
+  background-color: var(--background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.left-side img {
+  max-width: 70%;
+  height: auto;
+} /* Lado direito com o formulário */
+.right-side {
+  flex: 1;
+  background-color: var(--beer-yellow);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
