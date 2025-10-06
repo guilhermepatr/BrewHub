@@ -33,7 +33,6 @@ CREATE TABLE role_permissions(
     role_id INT NOT NULL,
     permission_id INT NOT NULL,
 
-    --Chave primaria composta para garantir unicidade--
     PRIMARY KEY (role_id, permission_id),
 
     CONSTRAINT fk_role_permissions_role_id 

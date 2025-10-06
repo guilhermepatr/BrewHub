@@ -4,22 +4,32 @@ namespace App\Models;
 
 use Lib\Validations;
 use Core\Database\ActiveRecord\Model;
-use Core\Database\ActiveRecord\BelongsTo;
+use Core\Database\ActiveRecord\HasMany;
 
 /**
  * @property int $id
  * @property string $name
  * @property string $email
  * @property string $encrypted_password
- * @property string $avatar_name
  */
 class User extends Model
 {
     protected static string $table = 'users';
-    protected static array $columns = ['name', 'email', 'encrypted_password', 'avatar_name'];
+    protected static array $columns = ['name', 'email', 'encrypted_password'];
 
-    protected ?string $password = null;
-    protected ?string $password_confirmation = null;
+    /*protected ?string $password = null;
+    protected ?string $password_confirmation = null;*/
+
+    /*public function __construct(
+        private int $id = -1,
+        private string|null $name = null,
+        private string|null $email = null,
+        private string|null $encrypted_password = null,
+        private string|null $password_confirmation = null,
+
+    )*/
+    
+
 
     public function validates(): void
     {
@@ -58,6 +68,11 @@ class User extends Model
         ) {
             $this->encrypted_password = password_hash($value, PASSWORD_DEFAULT);
         }
+    }
+
+    public function getId(): int
+    {
+        return $this->id;
     }
 
     //public function role(): BelongsTo
